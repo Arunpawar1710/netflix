@@ -31,11 +31,8 @@
     ```bash
     git clone https://github.com/Arunpawar1710/netflix.git
     ```
-- Change directory to the project.
-   cd DecSecOps-Project
-   ls
-    
-
+- Go to the Drectory of the Project
+  
 **Step 3: Install Docker and Run the App Using a Container:**
 
 - Set up Docker on the EC2 instance:
@@ -53,7 +50,8 @@
     
     ```bash
     docker build -t netflix .
-    docker run -d --name netflix -p 8081:80 netflix:latest
+    docker images
+    docker run -d -p 8081:80 (Image id)
     
     #to delete
     docker stop <containerid>
@@ -74,6 +72,10 @@ It will show an error cause you need API key
 
 Now recreate the Docker image with your api key:
 ```
+docker ps
+docker stop (contained id)
+docker rm (container id)
+
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 ```
 
