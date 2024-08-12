@@ -31,6 +31,9 @@
     ```bash
     git clone https://github.com/Arunpawar1710/netflix.git
     ```
+- Change directory to the project.
+   cd DecSecOps-Project
+   ls
     
 
 **Step 3: Install Docker and Run the App Using a Container:**
